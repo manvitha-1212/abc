@@ -19,7 +19,7 @@ from PIL import Image
 
 
 reload_model = joblib.load('happiness_model')
-
+st.title("Happiness score prediction")
 GDP_per_capita= st.number_input('GDP_per_capita')
 Social_support = st.number_input('Social_support') 
 Healthy_life_expectancy= st.number_input("Healthy_life_expectancy") 
@@ -27,7 +27,7 @@ Freedom_to_make_life_choices= st.number_input('Freedom_to_make_life_choices')
 Generosity = st.number_input('Generosity') 
 Perceptions_of_corruption= st.number_input("Perceptions_of_corruption") 
 result =""
-st.title=("Happiness score prediction")
+
 if st.button("Predict"): 
     prediction=reload_model.predict([[GDP_per_capita,Social_support, Healthy_life_expectancy,Freedom_to_make_life_choices,Generosity,Perceptions_of_corruption]])
     st.text('score')
