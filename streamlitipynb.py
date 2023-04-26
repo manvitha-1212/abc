@@ -15,7 +15,7 @@ import numpy as np
 
 from PIL import Image
 
-st.title("MY FIRST STREAMLIT WEBAPP")
+
 
 
 reload_model = joblib.load('happiness_model')
